@@ -9,7 +9,6 @@ async function validateToken(req, res, next) {
   }
 
   const session = await db.collection("sessions").findOne({ token });
-  console.log(session);
 
   if (!session) {
     return res.status(401).send("token invalido");
