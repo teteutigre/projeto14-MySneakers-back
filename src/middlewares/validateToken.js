@@ -1,6 +1,6 @@
 import { db } from "../database/db.js";
 
-async function validateToken(req, res, next) {
+export async function validateToken(req, res, next) {
   const { authorization } = req.headers;
   const token = authorization?.replace("Bearer ", "");
 
@@ -17,5 +17,3 @@ async function validateToken(req, res, next) {
   res.locals.session = session;
   next();
 }
-
-export default validateToken;
