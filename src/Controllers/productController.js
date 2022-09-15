@@ -7,10 +7,10 @@ export async function getProducts(req, res){
 
         if(!products){
             res.status(404).send("Não há produtos cadastrados na loja!");
-        } else if (products && brandFilter === '') {
+        } else if (products && !brandFilter) {
             res.send(products);
-        } else if (products && brandFilter !== '') {
-            const filtedProducts = db.collection("products").find({ brand: brand })
+        } else if (products && brandFilter) {
+            const filtedProducts = db.collection("products").find({ brand: brandFilter })
             
             if(!filtedProducts){
                 res.status(404).send('Não há produtos da marca desejada');
