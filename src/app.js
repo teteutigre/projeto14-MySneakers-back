@@ -12,5 +12,6 @@ app.use(express.json());
 app.use(authRouter);
 app.use(producRouter);
 
-const PORT = process.env.PORT;
-app.listen(PORT || 5000, () => console.log(`Listening on port ${PORT}`));
+app.listen(process.env.PORT, () => {
+    console.log("Server running on port " + process.env.PORT);
+});
