@@ -4,7 +4,7 @@ import { v4 as uuid } from "uuid";
 
 export async function signUp(req, res) {
   try {
-    const { email, password, name } = req.body;
+    const { email, password, name, cep, numero } = req.body;
     const salt = await bcrypt.genSalt();
     const passwordHash = bcrypt.hashSync(password, salt);
     const confirm = await db.collection("users").findOne({ email });
@@ -13,7 +13,9 @@ export async function signUp(req, res) {
       res.status(409).send("Email invalido");
       return;
     } else {
-      await db.collection("users").insertOne({ email, passwordHash, name });
+      await db
+        .collection("users")
+        .insertOne({ email, passwordHash, name, numero, cep });
       res.status(200).send("ok");
     }
   } catch (err) {
