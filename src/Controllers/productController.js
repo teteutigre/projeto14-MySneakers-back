@@ -34,7 +34,7 @@ export async function getProducts(req, res) {
       },
       {
         image_url:
-          "https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.awsli.com.br%2F257%2F257889%2Fproduto%2F49479001%2F6119b5eccf.jpg&imgrefurl=https%3A%2F%2Fwww.shop-pineapple.co%2FNike-SB-Dunk-Low-Travis-Scott-Regular-Box&tbnid=H9KpiZub4NPMEM&vet=12ahUKEwiwxJqSzaH6AhVcgpUCHU7wBKgQMygBegUIARCQAQ..i&docid=EdgcLjPjon2daM&w=1080&h=720&q=nike%20sb%20dunk%20low%20travis%20scott&ved=2ahUKEwiwxJqSzaH6AhVcgpUCHU7wBKgQMygBegUIARCQAQ",
+          "https://cf.shopee.com.br/file/9c63e352c4f5f0f1f06ff05ba7c2c7bf",
         name: "nike sb dunk low travis scott",
         brand: "Nike",
         price: "14280.90",
